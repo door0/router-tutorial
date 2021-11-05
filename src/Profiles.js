@@ -2,6 +2,7 @@ import React from 'react';
 import Profile from './Profile';
 import { NavLink, Route } from 'react-router-dom';
 import WithRouterSample from './withRouterSample';
+import RouterHookSample from './RouterHookSample';
 
 // 서브 라우터  : 특정 경로에 탭이 있는 경우 사용하면 편하다.
 function Profiles() {
@@ -18,6 +19,7 @@ function Profiles() {
 
       <Route path="/profiles" exact render={() => <div>사용자를 선택해주세요 </div>} />
       <Route path="/profiles/:username" component={Profile} />
+      <RouterHookSample />
       <WithRouterSample/>
     </div>
   );
